@@ -14,11 +14,19 @@ const userSchema = mongoose.Schema(
         password : {
             type : String,
             required: true
+        },
+        role : {
+            type : String,
+            required : 'user'
+        },
+        profileImage : {
+            type : String
         }
     },
     {
         timestamps : true
     }
 )
+
 
 module.exports = mongoose.model('user', userSchema)
